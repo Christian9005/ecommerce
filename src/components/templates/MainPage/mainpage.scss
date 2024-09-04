@@ -1,0 +1,19 @@
+.mainpage-container {
+  margin: auto;
+  padding: 30px 30px;
+  width: 800px;
+  border-radius: 10px;
+  background-color: #daf3f4;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

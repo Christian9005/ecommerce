@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.primary {
+    background-color: #58B258;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: #007bff;
+    color: white;
+  }
+
+  &.danger {
+    background-color: #EB2525;
+    color: white;
+  }
+
+  &.small {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  &.tall {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+}
