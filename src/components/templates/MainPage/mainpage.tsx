@@ -60,13 +60,23 @@ const Mainpage = () => {
       }
     };
 
-    const headers = ['Producto', 'Stock', 'PVP1', 'PVP1 + IVA'];
+    const calcularMargen = (pvp1:  number, precioCosto: number): number => {
+      if (precioCosto === 0) {
+          return 0;
+      }
+      const margen = (pvp1 - precioCosto) / precioCosto * 100;
+      return Math.round(margen);
+    };
+
+    const headers = ['Producto', 'Stock', 'Costo de Compra', 'PVP1', 'Margen de Ganancia'];
 
     const tableData = products.map(products => ({
         Producto: products.nombre,
         Stock: products.cantidadStock,
+        Costo: products.precioCosto,
         PVP1: products.pvp1,
-        'PVP1 + IVA': (products.pvp1 * 1.15).toFixed(2)
+        Margen: calcularMargen(products.pvp1, products.precioCosto) + '%',
+
     }));
 
     return (
